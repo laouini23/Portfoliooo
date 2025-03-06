@@ -1,0 +1,621 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Moo+Lah+Lah&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+                            @import url('https://fonts.cdnfonts.com/css/poppins');
+@font-face { font-family: "Romande ADF Script Std Italic";
+src: url("https://db.onlinewebfonts.com/t/e0bb26fa85175de40da1b6c46fddc0aa.eot");
+ src: url("https://db.onlinewebfonts.com/t/e0bb26fa85175de40da1b6c46fddc0aa.eot?#iefix")format("embedded-opentype"),
+url("https://db.onlinewebfonts.com/t/e0bb26fa85175de40da1b6c46fddc0aa.woff2")format("woff2"), url("https://db.onlinewebfonts.com/t/e0bb26fa85175de40da1b6c46fddc0aa.woff")format("woff"),
+ url("https://db.onlinewebfonts.com/t/e0bb26fa85175de40da1b6c46fddc0aa.ttf")format("truetype"),
+ url("https://db.onlinewebfonts.com/t/e0bb26fa85175de40da1b6c46fddc0aa.svg#Romande ADF Script Std Italic")format("svg");
+                            }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Romande ADF Script Std Italic";
+    font-size: 18px;
+    background-color: #3b2d1500; 
+    
+}
+
+body {
+    background-color: #deb40c;
+    
+}
+
+
+html::-webkit-scrollbar {
+    background-color: #232707;
+    width: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: rgb(213, 186, 33);
+    border-radius: 10px;
+    box-shadow: #eef112;
+}
+
+/* Navbar */
+#navbar {
+    background: #3b2d1500;
+    background-attachment: fixed;
+}
+
+
+.text-area {
+	display: grid;
+	place-items: center;
+	height: 100vh;
+	text-align: center;
+	font-family: "Montserrat", sans-serif;
+	text-transform: uppercase;
+	font-size: 50px;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke: 2px #fff;
+}
+.wrapper {
+    position: fixed; /* Ensures it stays on top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10; /* Higher than other elements */
+    pointer-events: none; /* Ensures it doesn’t interfere with clicks */
+}
+
+.round {
+    position: absolute;
+    width: 10px;  /* Small size */
+    height: 10px; /* Small size */
+    border-radius: 50%; /* Ensures it's a perfect circle */
+    background-color: #f0e510;
+    border: 2px solid #f0e510; /* Reduced border thickness */
+    opacity: 0.8; /* Slight opacity for the glow effect */
+    box-shadow: 0 0 5px #f0e510, 0 0 10px #f0e510, 0 0 15px #f0e510, 
+                0 0 20px #ebfb09, 0 0 30px #e4dd02, 0 0 40px #e4dd02;
+    animation: animate 4s linear infinite, ani-2 2s linear infinite, glow 1.5s ease-in-out infinite alternate;
+}
+
+.round:nth-child(1) {
+    left: 5%;
+    animation-delay: 0.5s;
+}
+.round:nth-child(2) {
+    left: 65%;
+    animation-delay: 1s;
+}
+.round:nth-child(3) {
+    left: 90%;
+    animation-delay: 1.5s;
+}
+.round:nth-child(4) {
+    left: 18%;
+    animation-delay: 2s;
+}
+.round:nth-child(5) {
+    left: 93%;
+    animation-delay: 2.5s;
+}
+.round:nth-child(6) {
+    left: 52%;
+    animation-delay: 3s;
+}
+.round:nth-child(7) {
+    left: 65%;
+    animation-delay: 3.5s;
+}
+.round:nth-child(8) {
+    left: 35%;
+    animation-delay: 4s;
+}
+.round:nth-child(9) {
+    left: 85%;
+    animation-delay: 4.5s;
+}
+.round:nth-child(10) {
+    left: 45%;
+    animation-delay: 5s;
+}
+.round:nth-child(11) {
+    left: 36%;
+    animation-delay: 5.5s;
+}
+.round:nth-child(12) {
+    left: 72%;
+    animation-delay: 6s;
+}
+.round:nth-child(13) {
+    left: 14%;
+    animation-delay: 6.5s;
+}
+.round:nth-child(14) {
+    left: 70%;
+    animation-delay: 7s;
+}
+@keyframes animate {
+    0% {
+        top: 0;
+        opacity: 1;
+    }
+    20% {
+        top: 20%;
+        opacity: 0.8;
+    }
+    40% {
+        top: 40%;
+        opacity: 0.6;
+    }
+    60% {
+        top: 60%;
+        opacity: 0.4;
+    }
+    80% {
+        top: 80%;
+        opacity: 0.2;
+    }
+    100% {
+        top: 100%;
+        opacity: 0;
+    }
+}
+@keyframes ani-2 {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(2.5);
+    }
+}
+
+/* navbar end */
+
+
+/* Home section start */
+
+
+
+
+
+
+
+#Home {
+    width: 100%;
+    height: 100vh; /* Ensures it takes up the full viewport height */
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    margin-bottom: 0; /* Removes unnecessary bottom margin */
+    padding: 0; /* Removes any extra padding */
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding/margins don’t affect width/height */
+}
+#under-door-image-2 {
+    position: absolute;
+    top: -1%; /* Adjust this to place the door image where you want */
+    left: 50%;
+    height: 850px;
+    transform: translateX(-50%); /* Center it horizontally */
+    width: 100%; /* Adjust size of the door image */
+    z-index: 2; /* Make sure it's on top */
+}
+#wonderland-text {
+    position: absolute;
+    top: 7%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Perfect centering */
+    text-align: center;
+    color: #3b4c14; /* Gold text */
+    font-size:100px;
+    font-weight: bold;
+    animation: glow 2s infinite alternate; /* Pulsating glow */
+    border-radius: 10px; /* Smooth edges */
+    z-index: 3; /* Ensure text is on top */
+}
+@keyframes glow {
+    0% {
+        text-shadow: 10px 10px 10px #FFD700, 0px 0px 20px #FFD700, 0px 0px 30px #FFD700, 0px 0px 40px #feed00, 0px 0px 50px #feed00;
+    }
+    50% {
+        text-shadow: 20px 20px 20px #faed00, 0px 0px 30px #faed00, 0px 0px 40px #faed00, 0px 0px 50px #d0e725, 0px 0px 60px #d0e725, 0px 0px 80px #FFEA00;
+    }
+    100% {
+        text-shadow: 10px 10px 10px #FFD700, 0px 0px 20px #FFD700, 0px 0px 30px #FFD700, 0px 0px 40px #feed00, 0px 0px 50px #feed00;
+    }
+}
+
+
+#TEXT{
+    font-size: 100px;
+    font-weight: bold;
+    color: #a4781f; /* Gold Yellow */
+    animation: glow 2s infinite alternate;
+}
+
+#play-music {
+    position: absolute;
+    top: 10px;
+    left: -450px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+    color: rgb(173, 148, 33);
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: #9b6616;
+    color: #7fa428; /* Gold text */
+    animation: glow 2s infinite alternate;
+}
+
+#play-music:hover {
+    color: rgb(173, 148, 33);
+    box-shadow: #9b6616;}
+#background-music {
+    display: none; /* Hide the audio element */
+}
+
+
+
+
+
+
+
+
+  /* About Section */
+
+
+#about-card {
+    position: relative;
+    top:90px; /* Moves it lower */
+    right: -750px; /* Moves it to the left */
+}
+
+/* For Services card - Center it (No position change needed, but can tweak if needed) */
+#services-card {
+    position: relative;
+    top: 100px;
+    left: 0;
+}
+
+/* For Part3 card - Move it down and to the right */
+#part3-card {
+    position: relative;
+    top:100px; /* Moves it lower */
+    right: -750px; /* Moves it to the left */
+}
+
+#about {
+    text-align: center;
+    font-size: 30px;
+    background-color: #121403;
+   
+    padding: 50px 10px;
+}
+
+.heading3{
+    text-align: center;
+    font-size: 30px;
+    color: #a8541d;
+    font-weight: bold;
+    box-shadow: 0 10px 9px rgba(123, 140, 36, 0.949);
+}
+.move-card {
+    background-color: #121403;
+    border: 0.5px solid;
+    height: 500px;
+    width: 500px;
+    position: relative;
+    top: 30px;  /* Moves it lower */
+    right: -20px; /* Moves it to the right */
+    border-radius: 1px;
+    text-align: center;
+    box-shadow: 0 15px 25px rgba(140, 72, 17, 1), 0 0 20px rgba(204, 162, 79, 0.7);
+    gap: 15px;
+}
+.move-card {
+    position: relative;
+    top: 100px;  /* Moves it lower */
+    right: -750px; /* Moves it to the right */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .move-card {
+        top: 10px; /* Adjust position for smaller screens */
+        right: 0px;
+    }
+}
+
+.card img {
+    width: 100%;
+    
+   align-items: center;
+   
+}
+@media (min-width: 768px) {
+    .card-img {
+      width: 300px; /* Ajuste la largeur sur les écrans plus larges */
+    }
+
+.card h3 {
+    font-size: 70px;
+    margin: 10px 0;
+    font-family: "Romande ADF Script Std Italic";
+    color: #cca24f; /* Text color */
+    margin-top: 180px;
+    
+    /* Glow Effect */
+    text-shadow: 0 0 10px #cca24f, 0 0 20px #ffd700, 0 0 30px #ffcc00;
+}
+} 
+
+.card p {
+    font-size: 1rem;
+    color: #b95d5d;
+}
+
+
+
+
+/* Responsive About Section */
+@media (max-width: 762px) {
+    #about p {
+        font-size: 15px;
+    }
+}
+
+/* Services Section */
+#services {
+    text-align: center;
+    font-size: 30px;
+    background-color: #121403;
+   
+    padding: 50px 10px;
+}
+
+.heading3{
+    text-align: center;
+    font-size: 30px;
+    color: #473427;
+    font-weight: bold;
+    box-shadow: 0 10px 9px rgba(123, 140, 36, 0.949);
+}
+.card {
+    background-color: #121403;
+    border: 0.5px solid;
+    height: 500px;
+    width: 500px;
+    top: 60px;  /* Moves it lower */
+    border-radius: 1px;
+    text-align: center;
+    box-shadow: 0 15px 25px rgba(140, 72, 17, 1), 0 0 20px rgba(204, 162, 79, 0.7);
+    gap: 15px;
+}
+
+
+.card img {
+    width: 100%;
+    
+   align-items: center;
+   
+}
+@media (min-width: 768px) {
+    .card-img {
+      width: 300px; /* Ajuste la largeur sur les écrans plus larges */
+    }
+
+.card h3 {
+    font-size: 70px;
+    margin: 10px 0;
+    font-family: "Romande ADF Script Std Italic";
+    color: #cca24f; /* Text color */
+    margin-top: 180px;
+    
+    /* Glow Effect */
+    text-shadow: 0 0 10px #cca24f, 0 0 20px #ffd700, 0 0 30px #ffcc00;
+}
+} 
+
+.card p {
+    font-size: 1rem;
+    color: #745b5b;
+}
+
+#part3 {
+    text-align: center;
+    font-size: 30px;
+    background-color: #121403;
+   
+    padding: 50px 10px;
+}
+
+.heading3{
+    text-align: center;
+    font-size: 30px;
+    color: #473427;
+    font-weight: bold;
+    box-shadow: 0 10px 9px rgba(123, 140, 36, 0.949);
+}
+.move-card {
+    background-color: #121403;
+    border: 0.5px solid;
+    height: 500px;
+    width: 500px;
+    position: relative;
+    top: 30px;  /* Moves it lower */
+    right: -20px; /* Moves it to the right */
+    border-radius: 1px;
+    text-align: center;
+    box-shadow: 0 15px 25px rgba(140, 72, 17, 1), 0 0 20px rgba(204, 162, 79, 0.7);
+    gap: 15px;
+}
+.move-card {
+    position: relative;
+    top: 100px;  /* Moves it lower */
+    right: -750px; /* Moves it to the right */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .move-card {
+        top: 10px; /* Adjust position for smaller screens */
+        right: 0px;
+    }
+}
+
+.card img {
+    width: 100%;
+    
+   align-items: center;
+   
+}
+@media (min-width: 768px) {
+    .card-img {
+      width: 300px; /* Ajuste la largeur sur les écrans plus larges */
+    }
+
+.card h3 {
+    font-size: 70px;
+    margin: 10px 0;
+    font-family: "Romande ADF Script Std Italic";
+    color: #cca24f; /* Text color */
+    margin-top: 180px;
+    
+    /* Glow Effect */
+    text-shadow: 0 0 10px #cca24f, 0 0 20px #ffd700, 0 0 30px #ffcc00;
+}
+} 
+
+.card p {
+    font-size: 1rem;
+    color: #745b5b;
+}
+
+
+
+
+/* Responsive About Section */
+@media (max-width: 762px) {
+    #part3 p {
+        font-size: 15px;
+    }
+}
+
+
+/* Popup styles */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: auto;
+}
+  
+  .popup-content {
+    background-color: #171d05;
+    margin: 10% auto;
+    padding: 20px;
+    color: #e0a961;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: #cb9823;
+    box-shadow: 0 0 30px 10px #cb9823; /* Stronger glow */
+    animation: fadeInScale 0.5s ease-out;
+  }
+  
+
+  @keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+  
+  .close-btn {
+    color: #e1ce20;
+    font-size: 50px;
+    font-weight: bold;
+    position: absolute;
+    border-radius: 4px;
+    top: 10px;
+    right: 25px;
+    transition: 0.3s;
+    text-shadow: 0 0 5px #e1ce20, 0 0 10px #e1ce20, 0 0 15px #e1ce20;
+}
+
+
+
+/* Animation */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Animation */
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+
+/* Glow Effect on Hover */
+.close-btn:hover {
+    text-shadow: 0 0 10px #ffdd00, 0 0 20px #ffcc00, 0 0 30px #ffaa00;
+    transform: scale(1.1);
+}
+  
+  
+  .close-btn:hover,
+  .close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .go-to-page-btn {
+    font-size: 40px; /* Makes the text bigger */
+    padding: 15px 40px; /* Increases button size */
+    background-color: #121403; /* Button color */
+    color: #121403; /* Text color */
+    border: none;
+    left: 200px;
+    top: -60px; /* Moves button slightly upward */
+    border-radius: 10px; /* Optional: Rounds corners */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #cca24f; /* Text color */
+    
+    /* Glow Effect */
+    text-shadow: 0 0 10px #cca24f, 0 0 20px #ffd700, 0 0 30px #ffcc00;
+}
+
+/* Hover effect */
+.go-to-page-btn:hover {
+    background-color: #2d330c00;
+    transform: scale(1.1); /* Makes button slightly bigger on hover */
+    transition: 0.3s;
+    text-shadow: 0 0 5px #e1ce20, 0 0 10px #e1ce20, 0 0 15px #e1ce20;
+}
+
+

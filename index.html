@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+  
+
+    <!-- boostrap link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- font link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <iframe id="bg-music" width="0" height="0" src="https://www.youtuberepeater.com/watch?v=ncggEjuJUWU&name=Monster+Taming+Game+Music+Cute+RPG+Royalty+free+Tracks+by+WOW+Sound#gsc.tab=0"
+    frameborder="0" allow="autoplay" allowfullscreen>
+  </iframe>
+
+ 
+    <!-- icone link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"> 
+</head>
+<body>
+  <div class="all-content">
+    <!-- Nav Bar Start -->
+    <nav class="navbar navbar-expand-lg" id="navbar">
+        <div class="container-fluid">
+            <button id="play-music">Enter Wonderland</button>
+        </div>
+    </nav>
+    <!-- Nav Bar End -->
+    
+    <!-- Background Music (Hidden) -->
+    <audio id="background-music" loop>
+        <source src="gamemusic.mp3" type="audio/mpeg">
+    </audio>
+    
+    <!--Nav bar end -->
+    
+  
+    <div class="wrapper">
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+        <div class="round"></div>
+    </div>
+    
+    
+
+   <!-- Home section start-->
+   <section id="Home">
+    <div class="content">
+        <div id="wonderland-container">
+            <img id="under-door-image-2" src="./door-stretching-into-fantasy-world (2).jpg" alt="Door image above">
+        </div>
+        <div id="wonderland-text" class="magic-text">
+            <h1>Welcome to My Wonderland</h1>
+            <button id="play-music">Play Music</button>
+
+            <audio id="background-music" loop muted preload="auto">
+              <source src="music.ogg" type="audio/ogg">
+              <source src="Royalty Free Fantasy Piano Music - White Woodlands - Alexander Nakarada (1).mp3" type="audio/mpeg"> <!-- fallback -->
+          </audio>
+          
+
+<script>
+    let audio = document.getElementById("background-music");
+    let playButton = document.getElementById("play-music");
+
+    playButton.addEventListener("click", function() {
+        if (audio.paused) {
+            audio.play(); // Play the music
+            audio.muted = false; // Unmute the audio
+            playButton.style.display = "none"; // Hide the button after clicking
+        } else {
+            audio.pause(); // Pause the music if already playing
+            playButton.style.display = "inline"; // Show the button if paused
+            audio.load(); // Reload the audio to allow play again after pausing
+        }
+    });
+</script>
+        </div>
+    </div>
+</section>
+</div>
+
+
+ 
+  
+
+
+  <section id="about">
+    <div class="container">
+      <div class="col-md-4 py-3 py-md-0">
+        <div class="card move-card" style="background-color: #121403;" onclick="openPopup('popup-about')">
+          <div class="card-body">
+            <h3>Cook Book </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Pop-up spécifique pour "About" avec Flipbook -->
+  <div id="popup-about" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup-about')">&times;</span>
+      <h3>Cook Book</h3>
+      
+      <!-- Intégration de l'iframe ici -->
+      <div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;">
+        <iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" 
+        src="https://online.fliphtml5.com/aggas/akpg/"seamless="seamless" scrolling="no" 
+        frameborder="0" allowtransparency="true" allowfullscreen="true" >
+      </iframe>
+    </div>
+    </div>
+  </div>
+  
+  
+  <section id="services">
+    <div class="container">
+      <div class="col-md-4 py-3 py-md-0">
+        <div class="card" style="background-color: #121403;" onclick="openPopup('popup-services')">
+          <div class="card-body">
+            <h3>Frontend Design & Dev</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Full-screen Pop-up for "Services" with Video -->
+  <div id="popup-services" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup-services')">&times;</span>
+  
+      <!-- Video displayed in full-screen -->
+      <div class="kouls7i7">
+        <h3>Frontend Design & Development</h3>
+        <video class="popup-video" controls style="width: 100%; height: 70vh; ">
+          <source src="./2025-02-13 17-28-47 (online-video-cutter.com).mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+      </div>
+    </div>
+  </div>
+
+
+  
+<section id="part3">
+  <div class="container">
+    <div class="col-md-4 py-3 py-md-0">
+      <div class="card move-card" style="background-color: #121403;" onclick="openPopup('popup-part3')">
+        <div class="card-body">
+          <h3>Story Illustrations </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Popups for Part 3 -->
+<div id="popup-part3" class="popup">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup('popup-part3')">&times;</span>
+    <h3>Story Illustrations</h3>
+    <div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;">
+      <iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;"
+       src="https://online.fliphtml5.com/aggas/cdho/"  seamless="seamless" scrolling="no" 
+       frameborder="0" allowtransparency="true" allowfullscreen="true" >
+      </iframe>
+    </div>
+  </div>
+</div>
+
+  
+  
+  
+  
+  
+  
+  
+  <!-- Popups -->
+  <div id="popup-about" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup-about')">&times;</span>
+      <h3>About Pop-up</h3>
+      <p>Details about the illustrations...</p>
+    </div>
+  </div>
+  
+  <div id="popup-services" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup-services')">&times;</span>
+      <h3>Services Pop-up</h3>
+      <p>Details about the Brand Guide...</p>
+    </div>
+  </div>
+  
+  <div id="popup-part3" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup-part3')">&times;</span>
+      <h3>Frontend Design Pop-up</h3>
+      <p>Details about Frontend Design & Development...</p>
+    </div>
+  </div>
+  
+<!-- Services section end -->
+
+
+<!-- Large Popups (Not Full-Screen) -->
+<div id="popupIllustrations" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup('popupIllustrations')">&times;</span>
+        <h2>Illustrations</h2>
+        <p>Details about Illustrations...</p>
+    </div>
+</div>
+
+<div id="popupBrandGuide" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup('popupBrandGuide')">&times;</span>
+        <h2>Brand Guide</h2>
+        <p>Details about Brand Guide...</p>
+    </div>
+</div>
+
+<div id="popupFrontend" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup('popupFrontend')">&times;</span>
+        <h2>Frontend Design & Development</h2>
+        <p>Details about Frontend Development...</p>
+    </div>
+</div>
+
+
+ <!-- Services section end -->
+ <section id="part3">
+         <div style="background-color: #121403;">
+          
+      
+           
+          
+             
+    </div>
+       
+   </section>
+
+
+
+<script>
+  document.getElementById("play-music").addEventListener("click", function() {
+        let audio = document.getElementById("background-music");
+        audio.play();
+        this.style.display = "none"; // Hide button after clicking
+    });
+
+   // Function to open popup
+   
+function openPopup(popupId) {
+  var popup = document.getElementById(popupId);
+  popup.style.display = "block";
+}
+
+// Function to close popup
+function closePopup(popupId) {
+  var popup = document.getElementById(popupId);
+  popup.style.display = "none";
+}
+
+// Close popup when clicking anywhere outside the content
+window.onclick = function(event) {
+  var popups = document.querySelectorAll('.popup');
+  popups.forEach(function(popup) {
+    if (event.target === popup) {
+      popup.style.display = "none";
+    }
+  });
+}
+
+</script>
+
+
+
+
+
+</body>
+
+<!-- Footer Section -->
+<footer id="footer" style="background-color: #121403;">
+    <div class="container">
+        <div class="footer-content">
+            <button onclick="window.location.href='page2.html';" class="go-to-page-btn">
+                 Page 2
+            </button>
+        </div>
+    </div>
+</footer>
+</html>

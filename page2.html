@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="page2.css">
+    <!-- boostrap link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- font link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+   
+    <!-- icone link-->
+    
+</head>
+<body>
+ 
+ <!-- Keep the iframe here too -->
+<div class="wrapper">
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+    <div class="round"></div>
+</div>
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var music = document.getElementById('music');
+    // Retrieve saved playback time from localStorage
+    var savedTime = localStorage.getItem('musicTime');
+    if (savedTime) {
+      music.currentTime = savedTime;
+    }
+    // Try to play the music (may require user interaction in some browsers)
+    music.play().catch(() => console.log("Autoplay might be blocked."));
+  });
+</script>
+
+<section id="about">
+    <div class="container">
+      <audio controls autoplay src="cuterealaxing.mp3" type="audio/mpeg" style="margin-left: 50px;left: 100px;box-shadow: #4c8814d4;" >
+       
+      </audio>
+        <div class="col-md-4 py-3 py-md-0">
+            <div class="card move-card" style="background-color: #16250800;" onclick="openPopup('popup-about')">
+                <div class="card-body">
+                    <h3>Illustrations</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Full-screen Pop-up for "About" with images -->
+<div id="popup-about" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup('popup-about')">&times;</span>
+
+        <!-- Images displayed in full-screen -->
+        <div class="illustrations">
+            <img src="ILLUSTRATIONS/donut 1.jpg" alt="Illustration 1" class="popup-img" style="height: 500px; width: 650px; margin-bottom: 30px;  ">
+            <img src="ILLUSTRATIONS/ghost2.jpg" alt="Illustration 2" class="popup-img"style="height: 400px; width: 650px;margin-bottom: 30px;">
+            <img src="ILLUSTRATIONS/gggg3.jpg" alt="Illustration 3" class="popup-img"style="height: 500px; width: 650px;margin-bottom: 30px;">
+            <img src="ILLUSTRATIONS/perroquet 4.jpg" alt="Illustration 4" class="popup-img"style="height: 700px; width: 650px;margin-bottom: 30px;"> 
+            <img src="ILLUSTRATIONS/scream5.jpg" alt="Illustration 5" class="popup-img"style="height: 500px; width: 650px;margin-bottom: 30px;">
+            <img src="ILLUSTRATIONS/deb6.jpg.png" alt="Illustration 6" class="popup-img"style="height: 400px; width: 650px;margin-bottom: 30px;">
+            <img src="ILLUSTRATIONS/face7.jpg" alt="Illustration 7" class="popup-img"style="height: 400px; width: 650px;">
+        </div>
+    </div>
+</div>
+
+  
+  <section id="services">
+    <div class="container">
+      <div class="col-md-4 py-3 py-md-0">
+        <div class="card" style="background-color: #121403;" onclick="openPopup('popup-services')">
+          <div class="card-body">
+            <h3>Brand Guide</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="popup-services" class="popup">
+      <div class="popup-content">
+          <span class="close-btn" onclick="closePopup('popup-services')">&times;</span>
+          <div class="services" style="margin-bottom: 50px;">
+          <img src="koul s7i7/Sans titre - 1.jpg" alt="Illustration 1"style="width: 800px ;margin-bottom: 50px;" >
+          <img src="koul s7i7/12.jpg.png" alt="Illustration 2"class="popup-img" style="width: 800px;margin-bottom: 50px;" >
+          <img src="koul s7i7/13.jpg" alt="Illustration 3"class="popup-img" style=" margin-bottom: 50px;" >
+          <img src="koul s7i7/4.png" alt="Illustration 4 " class="popup-img" style=" width: 950px ;">
+          <img src="koul s7i7/6.png" alt="Illustration 5" >
+          <img src="koul s7i7/15.jpg" alt="Illustration 6"class="popup-img" style=" margin-bottom: 50px;" >
+          <img src="koul s7i7/16.jpg" alt="Illustration 7" class="popup-img" style=" margin-bottom: 50px;" >
+          <img src="koul s7i7/17.jpg" alt="Illustration 8" class="popup-img" style=" margin-bottom: 50px;" >
+          <img src="koul s7i7/18.png" alt="Illustration 9" class="popup-img" style=" margin-bottom: 50px;" >
+          <img src="koul s7i7/19.png" alt="Illustration 10" class="popup-img" style=" margin-bottom: 50px;" >
+          <img src="koul s7i7/20.png" alt="Illustration 11" >
+      </div>
+    </div>
+  </div>
+
+  </section>
+  
+  
+  
+  
+  
+  
+  
+  <section id="part3">
+    <div class="container">
+      <div class="col-md-4 py-3 py-md-0">
+        <div class="card move-card" style="background-color: #121403;" onclick="openPopup('popup-part3')">
+          <div class="card-body">
+            <h3>Brand Guide </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="popup-part3" class="popup">
+      <div class="popup-content">
+          <span class="close-btn" onclick="closePopup('popup-part3')">&times;</span>
+          <div class="part3" style="margin-bottom: 50px;">
+          <img src="brandguide/11.jpg" alt="Illustration 1"class="popup-img"style="height: 450px; margin-bottom: 50px;" >
+          <img src="brandguide/12.jpg" alt="Illustration 2" class="popup-img"style=" margin-bottom: 50px;">
+          <img src="brandguide/lll.jpg" alt="Illustration 3"class="popup-img"style=" margin-bottom: 50px;" >
+          <img src="brandguide/14.jpg" alt="Illustration 4 "class="popup-img"style=" margin-bottom: 50px;">
+          <img src="brandguide/15.jpg" alt="Illustration 5" class="popup-img"style=" margin-bottom: 50px;">
+          <img src="brandguide/16.png" alt="Illustration 6"class="popup-img"style=" margin-bottom: 50px;" >
+          <img src="brandguide/17.jpg" alt="Illustration 7" class="popup-img"style=" margin-bottom: 50px;" >
+          <img src="brandguide/19.png" alt="Illustration 8" class="popup-img"style=" margin-bottom: 50px;" >
+          <img src="brandguide/20.png" alt="Illustration 9" class="popup-img"style=" margin-bottom: 50px;" >
+          <img src="brandguide/21.png" alt="Illustration 10" class="popup-img"style=" margin-bottom: 50px;" >
+          <img src="brandguide/22.png" alt="Illustration 11" >
+      </div>
+    </div>
+  </div>
+
+
+  
+  </section>
+  
+  <!-- Popups for Part 3 -->
+  <div id="popup-part3" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup-part3')">&times;</span>
+      <h3>Story Illustrations</h3>
+      <div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;">
+        <iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;"
+         src="https://online.fliphtml5.com/aggas/kgwf/"  seamless="seamless" scrolling="no" 
+         frameborder="0" allowtransparency="true" allowfullscreen="true" >
+        </iframe>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  <!-- Popups -->
+  <div id="popup-about" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup-about')">&times;</span>
+      <h3>About Pop-up</h3>
+      <p>Details about the illustrations...</p>
+    </div>
+  </div>
+  
+  <div id="popup-services" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup-services')">&times;</span>
+      <h3>Services Pop-up</h3>
+      <p>Details about the Brand Guide...</p>
+    </div>
+  </div>
+  
+  <div id="popup-part3" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup('popup-part3')">&times;</span>
+      <h3>Frontend Design Pop-up</h3>
+      <p>Details about Frontend Design & Development...</p>
+    </div>
+  </div>
+  
+<!-- Services section end -->
+
+
+<!-- Large Popups (Not Full-Screen) -->
+<div id="popupIllustrations" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup('popupIllustrations')">&times;</span>
+        <h2>Illustrations</h2>
+        <p>Details about Illustrations...</p>
+    </div>
+</div>
+
+<div id="popupBrandGuide" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup('popupBrandGuide')">&times;</span>
+        <h2>Brand Guide</h2>
+        <p>Details about Brand Guide...</p>
+    </div>
+</div>
+
+<div id="popupFrontend" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup('popupFrontend')">&times;</span>
+        <h2>Frontend Design & Development</h2>
+        <p>Details about Frontend Development...</p>
+    </div>
+</div>
+
+
+ <!-- Services section end -->
+ <section id="part3">
+         <div style="background-color: #121403;">
+          
+      
+           
+          
+             
+    </div>
+       
+   </section>
+
+
+
+<script>
+
+   // Function to open popup
+  
+
+
+
+
+  function openPopup(popupId) {
+  var popup = document.getElementById(popupId);
+  popup.style.display = "block";
+}
+
+// Function to close popup
+function closePopup(popupId) {
+  var popup = document.getElementById(popupId);
+  popup.style.display = "none";
+}
+
+// Close popup when clicking anywhere outside the content
+window.onclick = function(event) {
+  var popups = document.querySelectorAll('.popup');
+  popups.forEach(function(popup) {
+    if (event.target === popup) {
+      popup.style.display = "none";
+    }
+  });
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+   
+
+</body>
+
+<!-- Footer Section -->
+<footer id="footer" style="background-color: #121403; left: 300px;">
+    <div class="container">
+        <div class="footer-content">
+            <button onclick="window.location.href='index.html';" class="go-to-page-btn">
+                Page 1
+            </button>
+        </div>
+    </div>
+</footer>
+</html>
